@@ -52,7 +52,8 @@ module.exports = {
       boxShadow: {
         default: "0px 0px 4px rgba(54, 44, 73, 0.03)",
         md: "0px 4px 12px rgba(25, 30, 51, 0.06)",
-        lg: "0px 0px 12px rgba(54, 44, 73, 0.08)",
+        lg: "0px 4px 12px rgba(214, 210, 234, 0.33)",
+        button: "0px 8px 12px rgba(55, 53, 145, 0.13)",
       },
 
       borderRadius: {
@@ -87,6 +88,9 @@ module.exports = {
 
       maxHeight: {
         94: "23.5rem",
+      },
+      minHeight: {
+        16: "4rem",
       },
     },
   },
