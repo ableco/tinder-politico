@@ -20,14 +20,14 @@ export default function PreguntaPage() {
   const [selectedAnswer, setSelectedAnswer] = useState(null);
 
   return (
-    <div className="bg-gradient-to-b from-bgGradient-start to-bgGradient-end max-w-2xl mx-auto flex flex-col">
+    <div className="bg-gradient-to-b from-bgGradient-start to-bgGradient-end max-w-2xl mx-auto flex flex-col h-full">
       <div className="py-4 shadow-lg justify-center flex">
         <h3 className="font-normal text-base text-neutral-800">
           Pregunta {id} de 12
         </h3>
       </div>
       <div className="flex flex-col items-center flex-1">
-        <h4 className="font-normal text-xl text-neutral-800 my-10 text-center">
+        <h4 className="font-normal text-xl text-neutral-800 m-10 text-center">
           {temporalQuestion}
         </h4>
         <div className="flex flex-col items-center flex-1 w-full">
@@ -59,6 +59,8 @@ export default function PreguntaPage() {
             <Button
               label="Siguiente"
               appearance={selectedAnswer !== null ? "default" : "disabled"}
+              disabled={selectedAnswer == null}
+              onClick={() => router.push("/results")}
             />
           </div>
         </div>
