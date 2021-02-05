@@ -17,7 +17,7 @@ export default function Option({ appearance = "default", label, ...props }) {
 
   return (
     <button
-      className={`${styles[appearance]} font-normal rounded-2xl px-8 py-2 shadow-button focus:outline-none w-full`}
+      className={`${styles[appearance]} font-normal text-lg rounded-2xl px-8 py-2 shadow-button focus:outline-none w-full`}
       {...props}
     >
       {label}

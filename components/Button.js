@@ -10,13 +10,13 @@
 export default function Button({ appearance = "default", label, ...props }) {
   const styles = {
     default:
-      "bg-gradient-to-r from-primaryGradient-start to-primaryGradient-end text-white",
-    disabled: "bg-neutral-400 text-white",
+      "bg-gradient-to-r from-primaryGradient-start to-primaryGradient-end cursor-pointer text-white",
+    disabled: "bg-neutral-400 cursor-not-allowed text-white",
   };
 
   return (
     <button
-      className={`${styles[appearance]} font-normal rounded-2xl px-8 py-2 shadow-button focus:outline-none`}
+      className={`${styles[appearance]} font-normal text-xl rounded-2xl px-8 py-2 shadow-button focus:outline-none`}
       {...props}
     >
       {label}

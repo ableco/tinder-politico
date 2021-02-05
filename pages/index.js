@@ -1,13 +1,13 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
 import Button from "../components/Button";
-import Logo from "../components/icons/Logo";
+import { Logo } from "../components/icons";
 
 export default function Home() {
   const router = useRouter();
 
   return (
-    <div className="bg-gradient-to-b from-bgGradient-start to-bgGradient-end max-w-2xl mx-auto">
+    <div className="bg-gradient-to-b from-bgGradient-start to-bgGradient-end max-w-2xl mx-auto h-full">
       <Head>
         <title>Tinder Politico</title>
         <link rel="icon" href="/favicon.ico" />
