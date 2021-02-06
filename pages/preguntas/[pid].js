@@ -2,23 +2,39 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import Button from "../../components/Button";
 import Option from "../../components/Option";
+import useLocalStorage from "../../hooks/useLocalStorage";
 import { questions } from "../../utils/questions";
 
 export default function PreguntaPage() {
   const router = useRouter();
   const { pid } = router.query;
+  const [, setResults] = useLocalStorage("results");
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const { id, question, answers } = questions.find(
     (element) => element.id == pid,
   ) || { id: "", question: "", answers: [] };
 
   function handleNext() {
+    setResults((results) => {
+      const newResults = {
+        ...results,
+        [pid]: selectedAnswer,
+      };
+      return newResults;
+    });
+    setSelectedAnswer(null);
     if (id == questions[questions.length - 1].id) {
       router.push("/results");
     } else {
       router.push(`/preguntas/${Number.parseInt(id) + 1}`);
     }
   }
+
+  useEffect(() => {
+    document.querySelector("#__next").classList.add("scrollable");
+    return () =>
+      document.querySelector("#__next").classList.remove("scrollable");
+  }, []);
 
   useEffect(() => {
     if (pid > questions.length) {
@@ -41,14 +57,14 @@ export default function PreguntaPage() {
           {Object.values(answers).map((answer, index) => {
             let appearance = "default";
             if (selectedAnswer !== null) {
-              selectedAnswer === answer
+              selectedAnswer === index + 1
                 ? (appearance = "active")
                 : (appearance = "disabled");
             }
             function handleSelected(event) {
               event.preventDefault();
               setSelectedAnswer((current) =>
-                current === answer ? null : answer,
+                current === index + 1 ? null : index + 1,
               );
             }
 
@@ -62,7 +78,7 @@ export default function PreguntaPage() {
               </div>
             );
           })}
-          <div className="mt-7">
+          <div className="my-7">
             <Button
               label="Siguiente"
               appearance={selectedAnswer !== null ? "default" : "disabled"}
