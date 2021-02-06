@@ -3,6 +3,7 @@ import Link from "next/link";
 import Button from "../components/Button";
 import Card from "../components/Card";
 import ShareSection from "../components/ShareSection";
+import { useEffect } from "react";
 
 const temporalData = {
   recommendations: [
@@ -42,6 +43,12 @@ export default function PreguntaPage() {
     recommendations: [firstCandidate, ...restCandidates],
   } = temporalData;
 
+  useEffect(() => {
+    document.querySelector("#__next").classList.add("scrollable");
+    return () =>
+      document.querySelector("#__next").classList.remove("scrollable");
+  }, []);
+
   return (
     <div className="bg-gradient-to-b from-bgGradient-start to-bgGradient-end max-w-2xl mx-auto flex flex-col">
       <div className="py-4 shadow-lg justify-center flex">
@@ -75,7 +82,7 @@ export default function PreguntaPage() {
           Otras Recomendaciones
         </span>
         {restCandidates.map((candidate) => (
-          <div className="mb-2 w-full">
+          <div className="mb-2 w-full" key={candidate.name}>
             <Card>
               <div className="p-6 flex w-full justify-between">
                 <div className="flex">

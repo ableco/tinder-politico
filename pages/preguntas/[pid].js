@@ -1,23 +1,30 @@
 import { useRouter } from "next/router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Button from "../../components/Button";
 import Option from "../../components/Option";
-
-const temporalQuestion =
-  "¿Cómo defines tu posición frente al cambio climatico?";
-
-const temporalAnswers = [
-  "Estoy activamente comprometido",
-  "Me interesa",
-  "No es mi prioridad",
-  "Soy indiferente",
-  "Creo que todo es una farsa",
-];
+import { questions } from "../../utils/questions";
 
 export default function PreguntaPage() {
   const router = useRouter();
-  const { id } = router.query;
+  const { pid } = router.query;
   const [selectedAnswer, setSelectedAnswer] = useState(null);
+  const { id, question, answers } = questions.find(
+    (element) => element.id == pid,
+  ) || { id: "", question: "", answers: [] };
+
+  function handleNext() {
+    if (id == questions[questions.length - 1].id) {
+      router.push("/results");
+    } else {
+      router.push(`/preguntas/${Number.parseInt(id) + 1}`);
+    }
+  }
+
+  useEffect(() => {
+    if (pid > questions.length) {
+      router.push("/");
+    }
+  }, [router, pid]);
 
   return (
     <div className="bg-gradient-to-b from-bgGradient-start to-bgGradient-end max-w-2xl mx-auto flex flex-col h-full">
@@ -28,10 +35,10 @@ export default function PreguntaPage() {
       </div>
       <div className="flex flex-col items-center flex-1">
         <h4 className="font-normal text-xl text-neutral-800 m-10 text-center">
-          {temporalQuestion}
+          {question}
         </h4>
         <div className="flex flex-col items-center flex-1 w-full">
-          {temporalAnswers.map((answer, index) => {
+          {Object.values(answers).map((answer, index) => {
             let appearance = "default";
             if (selectedAnswer !== null) {
               selectedAnswer === answer
@@ -60,7 +67,7 @@ export default function PreguntaPage() {
               label="Siguiente"
               appearance={selectedAnswer !== null ? "default" : "disabled"}
               disabled={selectedAnswer == null}
-              onClick={() => router.push("/results")}
+              onClick={handleNext}
             />
           </div>
         </div>
