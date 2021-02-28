@@ -52,14 +52,21 @@ export default function PreguntaPage() {
       <div className="flex flex-col items-center flex-1 p-4">
         <Card>
           <div className="px-16 py-6 flex flex-col items-center justify-center">
-            <img
-              className="w-28 h-28 bg-neutral-200 rounded-full object-cover"
-              src={firstCandidate.data.profile_photo_url}
-              alt={titleize(
-                `${firstCandidate.data.names}  ${firstCandidate.data.family_name} ${firstCandidate.data.mothers_maiden_name}`,
-              )}
-            />
-            <h4 className="font-medium text-xl text-neutral-800 text-center">
+            <div className="flex flex-row">
+              <img
+                className="w-28 h-28 bg-neutral-200 rounded-lg object-cover border-neutral-200 border-2"
+                src={firstCandidate.data.profile_photo_url}
+                alt={titleize(
+                  `${firstCandidate.data.names}  ${firstCandidate.data.family_name} ${firstCandidate.data.mothers_maiden_name}`,
+                )}
+              />
+              <img
+                className="w-28 h-28 bg-neutral-200 rounded-lg object-cover ml-4 border-neutral-200 border-2"
+                src={firstCandidate.data.political_organization.logo}
+                alt={firstCandidate.data.political_organization.name}
+              />
+            </div>
+            <h4 className="font-medium text-xl text-neutral-800 text-center mt-4">
               {titleize(
                 `${firstCandidate.data.names}  ${firstCandidate.data.family_name} ${firstCandidate.data.mothers_maiden_name}`,
               )}
@@ -87,13 +94,20 @@ export default function PreguntaPage() {
             <Card>
               <div className="p-6 flex w-full justify-between">
                 <div className="flex">
-                  <img
-                    className="w-12 h-12 bg-neutral-200 rounded-full object-cover"
-                    src={candidate.data.profile_photo_url}
-                    alt={titleize(
-                      `${candidate.data.names}  ${candidate.data.family_name} ${candidate.data.mothers_maiden_name}`,
-                    )}
-                  />
+                  <div className="flex flex-col">
+                    <img
+                      className="w-12 h-12 bg-neutral-200 rounded-lg object-cover border-neutral-200 border-2"
+                      src={candidate.data.profile_photo_url}
+                      alt={titleize(
+                        `${candidate.data.names}  ${candidate.data.family_name} ${candidate.data.mothers_maiden_name}`,
+                      )}
+                    />
+                    <img
+                      className="w-12 h-12 bg-neutral-200 rounded-lg object-cover mt-1 border-neutral-200 border-2"
+                      src={candidate.data.political_organization.logo}
+                      alt={titleize(candidate.data.political_organization.name)}
+                    />
+                  </div>
                   <div className="mx-3 flex flex-col justify-between">
                     <div>
                       <p className="font-medium text-xl text-neutral-800">
