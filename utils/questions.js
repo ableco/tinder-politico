@@ -1,134 +1,191 @@
 export const questions = [
   {
     id: 1,
-    question: "¿Cual deberia ser el rol del estado en la economia del pais?",
+    question:
+      "¿Cuál es su postura sobre la Constitución Política del Perú promulgada en 1993?",
     answers: {
-      value1: "No regulaciones",
-      value2: "Minimamente regulado",
-      value3: "Moderadamente regulado",
-      value4: "Altamente regulado",
-      value5: "Todo estatizado",
+      value1: "Debe hacerse una nueva",
+      value2: "Se debe someter a votación si queremos una nueva o no",
+      value3: "Algunas partes deben ser modificadas",
+      value4: null,
+      value5: "Debe quedarse como está",
     },
   },
   {
     id: 2,
-    question: "¿Cual es su nivel de compromiso frente al cambio climatico?",
+    question: "¿Cuál debe ser el rol del Estado en el sector empresarial?",
     answers: {
-      value1: "No creo que exista",
-      value2: "No es mi prioridad",
-      value3: "Soy conciente del problema",
-      value4: "Intento generar conciencia",
-      value5: "Activamente comprometido",
+      value1:
+        "El Estado debe fiscaliza pero también debe ser dueño de empresas",
+      value2: null,
+      value3: null,
+      value4: null,
+      value5: "Las empresas deben ser privadas y el Estado solo fiscalizarlas",
     },
   },
   {
     id: 3,
-    question: "¿Que cree se deberia hace para mejorar el sistema de salud?",
+    question:
+      "¿El gobierno debería impulsar un impuesto a las grandes fortunas?",
     answers: {
-      value1: "Privatizar hospitales publicos",
-      value2: "Mas facilidades a la salud privada",
-      value3: "Mas presupuesto a publicos y privados",
-      value4: "Mas recursos a hospitales publicos",
-      value5: "Estatizar el sistema",
+      value1: "A favor",
+      value2: null,
+      value3: "Me da igual",
+      value4: null,
+      value5: "En contra",
     },
   },
   {
     id: 4,
-    question: "¿Que opinas sobre el estado de la educacion superior?",
+    question: "¿El estado debe controlar los precios?",
     answers: {
-      value1: "El mercado deberia ser el regulador",
-      value2: "Se necesita un minimo de regulacion",
-      value3: "Se necesitan altos estandares de calidad",
-      value4: "Se debe regular entidades con fines de lucro",
-      value5: "No deberian existir universidades privadas",
+      value1: "Sí, siempre",
+      value2: null,
+      value3: "Sólo regular en el caso ciertos productos o servicios",
+      value4: null,
+      value5: "No, nunca",
     },
   },
   {
     id: 5,
-    question: "¿Como deberia combatirse la inseguridad?",
+    question: "Los monopolios en el mercado peruano…",
     answers: {
-      value1: "Penas mas duras",
-      value2: "Normas mas estrictas",
-      value3: "Mejores ejecución de las normas actuales",
-      value4: "Intentar reformar en lugar de castigar",
-      value5: "Invertir mas en educación civica",
+      value1: "No deberían existir",
+      value2: null,
+      value3: "Sólo deben existir si el Estado los regula",
+      value4: null,
+      value5: "No hay problema con que existan",
     },
   },
   {
     id: 6,
-    question: "¿Cual es su posicion frente a la immigracion venezolana?",
+    question: "Las escuelas o universidades privadas…",
     answers: {
-      value1: "No deberian permitir entrar a mas personas",
-      value2: "Perseguir y castigar la immigracion ilegal",
-      value3: "Mantener filtros minimos de entrada",
-      value4: "Fomentar la immigracion legal",
-      value5: "Immigrantes deberian tener facilidades",
+      value1:
+        "Deben cumplir con un estándar mínimo de calidad regulado por el estado y pagar impuestos como cualquier empresa privada",
+      value2:
+        "Deben cumplir con un estándar mínimo de calidad regulado por el estado y no pagar impuestos por el servicio que brindan",
+      value3: null,
+      value4:
+        "Deben ser libres de gestionarse y pagar impuestos como cualquier empresa privada",
+      value5:
+        "Deben ser libres de gestionarse y no pagar impuestos por el servicio que brindan",
     },
   },
   {
     id: 7,
-    question: "¿Como se deberia combatir la corrupción?",
+    question: "¿Quién crees que deba hacer el proceso de vacunación?",
     answers: {
-      value1: "No es un problema prioritario",
-      value2: "Depende de la gravedad del caso",
-      value3: "Se necesitan mejores normas",
-      value4: "Se necesitan castigos mas duros",
-      value5: "Se deberia limpiar todo el estado",
+      value1: "Solo el Estado siempre",
+      value2: "Solo el Estado y quizá después el privado",
+      value3: null,
+      value4: "El Estado con ayuda del privado pero regulado para que no lucre",
+      value5: "El Estado y el privado como mejor le parezca",
     },
   },
   {
     id: 8,
-    question: "¿Que pais deberia ser nuestro ejemplo a futuro?",
+    question: "Sobre el aborto, yo considero que…",
     answers: {
-      value1: "EEUU",
-      value2: "Chile",
-      value3: "Canada",
-      value4: "Uruguay",
-      value5: "China",
+      value1: "Debería ser legal en todos los casos",
+      value2: "Debería ser legal solo en algunos casos",
+      value3: "No tengo posición",
+      value4: null,
+      value5: "No debería ser legal en ningún caso",
     },
   },
   {
     id: 9,
-    question: "¿Que opina sobre el la violencia familiar?",
+    question: "Apoya la unión civil entre personas del mismo sexo?",
     answers: {
-      value1: "Es un asunto privado",
-      value2: "Ya existen normas y se aplican bien",
-      value3: "Las normas deberian aplicarse mejor",
-      value4: "Deberian existir mas proteccion y castigos",
-      value5: "Deberia ser gravemente castigado",
+      value1: null,
+      value2: "A favor",
+      value3: "Me da igual",
+      value4: null,
+      value5: "En contra",
     },
   },
   {
     id: 10,
-    question: "¿Que opina del movimiento feminista?",
+    question:
+      "¿Cuál es su postura frente a la deportación de extranjeros ilegales?",
     answers: {
-      value1: "Discrimina a los hombres",
-      value2: "No es mi prioridad",
-      value3: "Lo reconozco",
-      value4: "Apoyo al movimiento",
-      value5: "Deberia ser apoyado por todos",
+      value1: "En contra, se debe ayudar no deportar",
+      value2: null,
+      value3: "Me da igual",
+      value4: null,
+      value5: "A favor, deben ser deportados",
     },
   },
   {
     id: 11,
-    question: "¿Como se deberia combatir la pobreza?",
+    question: "Sobre la eutanasia, yo considero que…",
     answers: {
-      value1: "Inyectar dinero en el sector privado",
-      value2: "Fomentar empleabilidad privada",
-      value3: "Mejorar le educación tecnica",
-      value4: "Ayuda del estado a problacion vulnerable",
-      value5: "Ingreso minimo universal",
+      value1: "A favor",
+      value2: null,
+      value3: "No tengo posición",
+      value4: null,
+      value5: "En contra",
     },
   },
   {
     id: 12,
-    question: "¿Que opina sobre el matrimonio entre el mismo sexo?",
+    question:
+      "La Educación Sexual Integral (ESI) busca brindar información oportuna a niños, niñas y adolescentes para su protección y toma de decisiones en su autocuidado respecto al tema. ¿Qué opinas sobre ella?",
     answers: {
-      value1: "Deberia ser castigado",
-      value2: "No deberia ser permitido",
-      value3: "Acepto la union civil, pero no matrimonio",
-      value4: "Deberia permitirse en mayoria de casos",
-      value5: "Deberia existir en todos los casos",
+      value1: "Debe realizarse tanto en casa como en las escuelas.",
+      value2: null,
+      value3: "Me da igual",
+      value4:
+        "No debe brindarse. Cada niño, niña o adolescente debe descubrirlo por su cuenta",
+      value5: "Debe realizarse solo en casa, a cargo de la familia.",
+    },
+  },
+  {
+    id: 13,
+    question:
+      "¿Cómo cree que debería financiarse el sistema de pensiones para la vejez?",
+    answers: {
+      value1:
+        "El estado debería financiar pensiones mínimas para todos a través de impuestos principalmente.",
+      value2:
+        "Cada trabajador ahorraría para su vejez en un sistema de fondo individual, y el estado financia con impuestos pensiones mínimas a quienes necesiten (sistema mixto 1)",
+      value3: null,
+      value4:
+        "Cada trabajador ahorraría para su vejez en un sistema de fondo individual, aportando una parte a un fondo solidario para garantizar pensiones mínimas a quienes necesiten (sistema mixto 2)",
+      value5: null,
+    },
+  },
+  {
+    id: 14,
+    question:
+      "¿Qué opinas sobre el licenciamiento de universidades y de institutos?",
+    answers: {
+      value1:
+        "Licenciamiento sujeto a renovación por parte de la SUNEDU/MINEDU.",
+      value2: null,
+      value3:
+        "Un solo licenciamiento válido para siempre por parte de la SUNEDU/MINEDU.",
+      value4: null,
+      value5:
+        "No debería haber licenciamiento o lo deberían hacer terceros privados.",
+    },
+  },
+  {
+    id: 15,
+    question:
+      "¿Cómo solucionamos el acceso a internet por parte de los estudiantes?",
+    answers: {
+      value1:
+        "Aumento del presupuesto al sector educación destinado a cierre de brechas digitales",
+      value2:
+        "Masificación del internet satelital mediante la compra de satelite y/o uso de mecanismos ya existentes",
+      value3: null,
+      value4:
+        "Ampliación de la fibra óptica, de nuevas redes y/o de las ya existentes",
+      value5: null,
     },
   },
 ];
+
+export const questionsSize = questions.length;

@@ -46,7 +46,7 @@ export default function PreguntaPage() {
     <div className="bg-gradient-to-b from-bgGradient-start to-bgGradient-end max-w-2xl mx-auto flex flex-col h-full">
       <div className="py-4 shadow-lg justify-center flex">
         <h3 className="font-normal text-base text-neutral-800">
-          Pregunta {id} de 12
+          Pregunta {id} de {questions.length}
         </h3>
       </div>
       <div className="flex flex-col items-center flex-1">
@@ -66,6 +66,10 @@ export default function PreguntaPage() {
               setSelectedAnswer((current) =>
                 current === index + 1 ? null : index + 1,
               );
+            }
+
+            if (answer == null) {
+              return null;
             }
 
             return (

@@ -7,6 +7,7 @@ import Card from "../components/Card";
 import ShareSection from "../components/ShareSection";
 import useLocalStorage from "../hooks/useLocalStorage";
 import titleize from "../utils/titleize";
+import { questionsSize } from "../utils/questions";
 
 export default function PreguntaPage() {
   const router = useRouter();
@@ -29,7 +30,7 @@ export default function PreguntaPage() {
   }, []);
 
   useEffect(() => {
-    if (Object.keys(results || {}).length !== 12) {
+    if (Object.keys(results || {}).length !== questionsSize) {
       router.push("/");
     }
   }, [router, results]);

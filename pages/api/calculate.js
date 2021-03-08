@@ -5,17 +5,20 @@ const temporalResultsCandidate1 = {
   id: 42,
   answers: {
     1: 1,
-    2: 2,
-    3: 4,
-    4: 2,
-    5: 5,
+    2: 1,
+    3: 5,
+    4: 3,
+    5: 1,
     6: 1,
-    7: 2,
-    8: 3,
-    9: 5,
-    10: 2,
-    11: 2,
-    12: 2,
+    7: 4,
+    8: 5,
+    9: 2,
+    10: 5,
+    11: 1,
+    12: 5,
+    13: 1,
+    14: 1,
+    15: 2,
   },
 };
 
@@ -23,18 +26,21 @@ const temporalResultsCandidate1 = {
 const temporalResultsCandidate2 = {
   id: 130,
   answers: {
-    1: 2,
-    2: 2,
-    3: 3,
-    4: 4,
+    1: 3,
+    2: 5,
+    3: 5,
+    4: 5,
     5: 5,
-    6: 5,
-    7: 1,
+    6: 2,
+    7: 5,
     8: 3,
-    9: 5,
-    10: 2,
-    11: 2,
-    12: 5,
+    9: 3,
+    10: 3,
+    11: 5,
+    12: 3,
+    13: 2,
+    14: 3,
+    15: 2,
   },
 };
 
@@ -42,18 +48,21 @@ const temporalResultsCandidate2 = {
 const temporalResultsCandidate3 = {
   id: 108,
   answers: {
-    1: 1,
-    2: 2,
-    3: 4,
-    4: 1,
-    5: 5,
-    6: 5,
-    7: 2,
-    8: 3,
-    9: 1,
-    10: 1,
+    1: 3,
+    2: 5,
+    3: 5,
+    4: 5,
+    5: 3,
+    6: 2,
+    7: 5,
+    8: 5,
+    9: 5,
+    10: 3,
     11: 3,
-    12: 1,
+    12: 3,
+    13: 2,
+    14: 5,
+    15: 2,
   },
 };
 
@@ -61,18 +70,21 @@ const temporalResultsCandidate3 = {
 const temporalResultsCandidate4 = {
   id: 86,
   answers: {
-    1: 5,
-    2: 2,
+    1: 1,
+    2: 1,
     3: 1,
-    4: 1,
-    5: 2,
-    6: 2,
-    7: 3,
-    8: 5,
-    9: 1,
-    10: 1,
-    11: 2,
-    12: 2,
+    4: 3,
+    5: 3,
+    6: 1,
+    7: 1,
+    8: 1,
+    9: 2,
+    10: 3,
+    11: 1,
+    12: 3,
+    13: 1,
+    14: 1,
+    15: 2,
   },
 };
 
@@ -81,17 +93,20 @@ const temporalResultsCandidate5 = {
   id: 159,
   answers: {
     1: 1,
-    2: 4,
-    3: 2,
-    4: 1,
-    5: 5,
-    6: 3,
-    7: 3,
+    2: 1,
+    3: 1,
+    4: 3,
+    5: 1,
+    6: 1,
+    7: 1,
     8: 2,
-    9: 5,
-    10: 1,
-    11: 1,
-    12: 5,
+    9: 2,
+    10: 3,
+    11: 3,
+    12: 1,
+    13: 1,
+    14: 1,
+    15: 4,
   },
 };
 
@@ -99,18 +114,21 @@ const temporalResultsCandidate5 = {
 const temporalResultsCandidate6 = {
   id: 75,
   answers: {
-    1: 1,
-    2: 2,
+    1: 5,
+    2: 5,
     3: 5,
-    4: 2,
-    5: 1,
-    6: 3,
-    7: 3,
-    8: 3,
-    9: 2,
-    10: 1,
-    11: 1,
-    12: 2,
+    4: 5,
+    5: 3,
+    6: 2,
+    7: 5,
+    8: 5,
+    9: 5,
+    10: 5,
+    11: 5,
+    12: 5,
+    13: 2,
+    14: 3,
+    15: 4,
   },
 };
 
@@ -118,284 +136,263 @@ const temporalResultsCandidate6 = {
 const temporalResultsCandidate7 = {
   id: 65,
   answers: {
-    1: 5,
+    1: 1,
     2: 1,
-    3: 3,
-    4: 1,
-    5: 3,
-    6: 5,
+    3: 1,
+    4: 3,
+    5: 1,
+    6: 1,
     7: 1,
-    8: 3,
+    8: 1,
     9: 2,
     10: 1,
     11: 1,
-    12: 3,
-  },
-};
-
-// Nidia Ruth Vilchez Yucra
-const temporalResultsCandidate8 = {
-  id: 177,
-  answers: {
-    1: 5,
-    2: 1,
-    3: 2,
-    4: 3,
-    5: 5,
-    6: 5,
-    7: 2,
-    8: 4,
-    9: 5,
-    10: 1,
-    11: 4,
-    12: 2,
+    12: 1,
+    13: 1,
+    14: 3,
+    15: 1,
   },
 };
 
 // Daniel Enrique Salaverry Villa
-const temporalResultsCandidate9 = {
+const temporalResultsCandidate8 = {
   id: 31,
   answers: {
-    1: 4,
-    2: 2,
-    3: 1,
-    4: 1,
-    5: 3,
-    6: 2,
-    7: 1,
-    8: 2,
-    9: 1,
-    10: 1,
-    11: 1,
-    12: 2,
-  },
-};
-
-// Luis Fernando Olivera Vega
-const temporalResultsCandidate10 = {
-  id: 21,
-  answers: {
-    1: 5,
-    2: 2,
+    1: 1,
+    2: 5,
     3: 3,
-    4: 2,
-    5: 1,
-    6: 3,
-    7: 4,
-    8: 3,
-    9: 5,
-    10: 4,
-    11: 1,
+    4: 3,
+    5: 5,
+    6: 2,
+    7: 5,
+    8: 2,
+    9: 2,
+    10: 5,
+    11: 5,
     12: 3,
+    13: 4,
+    14: 1,
+    15: 4,
   },
 };
 
 // Julio Armando Guzman Caceres
-const temporalResultsCandidate11 = {
+const temporalResultsCandidate9 = {
   id: 9,
   answers: {
-    1: 5,
-    2: 2,
-    3: 3,
-    4: 1,
-    5: 2,
-    6: 2,
+    1: 2,
+    2: 5,
+    3: 5,
+    4: 3,
+    5: 3,
+    6: 1,
     7: 2,
     8: 2,
     9: 2,
     10: 1,
-    11: 2,
-    12: 2,
+    11: 1,
+    12: 1,
+    13: 4,
+    14: 1,
+    15: 4,
   },
 };
 
 // Ollanta Moises Humala Tasso
-const temporalResultsCandidate12 = {
+const temporalResultsCandidate10 = {
   id: 97,
+  answers: {
+    1: 2,
+    2: 1,
+    3: 1,
+    4: 3,
+    5: 5,
+    6: 2,
+    7: 2,
+    8: 1,
+    9: 2,
+    10: 1,
+    11: 1,
+    12: 1,
+    13: 2,
+    14: 3,
+    15: 4,
+  },
+};
+
+// Jose Pedro Castillo Terrones
+const temporalResultsCandidate11 = {
+  id: 168,
+  answers: {
+    1: 1,
+    2: 1,
+    3: 3,
+    4: 3,
+    5: 1,
+    6: 1,
+    7: 3,
+    8: 2,
+    9: 3,
+    10: 5,
+    11: 3,
+    12: 3,
+    13: 2,
+    14: 3,
+    15: 1,
+  },
+};
+
+// Alberto Ismael Beingolea Delgado
+const temporalResultsCandidate12 = {
+  id: 206,
   answers: {
     1: 5,
     2: 5,
     3: 5,
     4: 5,
-    5: 5,
-    6: 5,
-    7: 5,
-    8: 5,
-    9: 5,
-    10: 1,
-    11: 2,
-    12: 2,
-  },
-};
-
-// Jose Pedro Castillo Terrones
-const temporalResultsCandidate13 = {
-  id: 168,
-  answers: {
-    1: 3,
-    2: 3,
-    3: 3,
-    4: 3,
     5: 3,
-    6: 3,
-    7: 3,
-    8: 3,
-    9: 5,
-    10: 1,
-    11: 2,
-    12: 2,
-  },
-};
-
-// Alberto Ismael Beingolea Delgado
-const temporalResultsCandidate14 = {
-  id: 206,
-  answers: {
-    1: 2,
-    2: 2,
-    3: 2,
-    4: 1,
-    5: 2,
-    6: 5,
-    7: 2,
+    6: 1,
+    7: 5,
     8: 2,
-    9: 2,
-    10: 1,
-    11: 2,
-    12: 2,
+    9: 5,
+    10: 5,
+    11: 5,
+    12: 5,
+    13: 2,
+    14: 1,
+    15: 1,
   },
 };
 
 // Rafael Gaston Tadeo Milagros Santos Normand
-const temporalResultsCandidate15 = {
+const temporalResultsCandidate13 = {
   id: 189,
+  answers: {
+    1: 5,
+    2: 5,
+    3: 5,
+    4: 3,
+    5: 1,
+    6: 2,
+    7: 5,
+    8: 5,
+    9: 3,
+    10: 5,
+    11: 3,
+    12: 3,
+    13: 2,
+    14: 5,
+    15: 1,
+  },
+};
+
+// Daniel Belizario Urresti Elera
+const temporalResultsCandidate14 = {
+  id: 119,
+  answers: {
+    1: 3,
+    2: 5,
+    3: 3,
+    4: 3,
+    5: 1,
+    6: 2,
+    7: 5,
+    8: 5,
+    9: 2,
+    10: 5,
+    11: 1,
+    12: 1,
+    13: 1,
+    14: 1,
+    15: 4,
+  },
+};
+
+// Ciro Alfredo Galvez Herrera
+const temporalResultsCandidate15 = {
+  id: 53,
+  answers: {
+    1: 1,
+    2: 5,
+    3: 3,
+    4: 5,
+    5: 5,
+    6: 4,
+    7: 4,
+    8: 2,
+    9: 5,
+    10: 3,
+    11: 1,
+    12: 3,
+    13: 1,
+    14: 5,
+    15: 1,
+  },
+};
+
+// George Patrick Forsyth Sommer
+const temporalResultsCandidate16 = {
+  id: 149,
+  answers: {
+    1: 3,
+    2: 5,
+    3: 5,
+    4: 5,
+    5: 3,
+    6: 2,
+    7: 4,
+    8: 5,
+    9: 2,
+    10: 5,
+    11: 5,
+    12: 3,
+    13: 2,
+    14: 1,
+    15: 2,
+  },
+};
+
+// Rafael Bernardo Lopez Aliaga Cazorla
+const temporalResultsCandidate17 = {
+  id: 198,
+  answers: {
+    1: 3,
+    2: 5,
+    3: 5,
+    4: 5,
+    5: 1,
+    6: 4,
+    7: 5,
+    8: 5,
+    9: 5,
+    10: 5,
+    11: 5,
+    12: 5,
+    13: 2,
+    14: 5,
+    15: 2,
+  },
+};
+
+// Jose Alejandro Vega Antonio
+const temporalResultsCandidate18 = {
+  id: 203,
   answers: {
     1: 1,
     2: 1,
     3: 1,
     4: 1,
     5: 1,
-    6: 5,
+    6: 2,
     7: 1,
     8: 3,
     9: 5,
-    10: 1,
-    11: 1,
-    12: 2,
-  },
-};
-
-// Daniel Belizario Urresti Elera
-const temporalResultsCandidate16 = {
-  id: 119,
-  answers: {
-    1: 1,
-    2: 2,
-    3: 3,
-    4: 1,
-    5: 2,
-    6: 3,
-    7: 1,
-    8: 2,
-    9: 3,
-    10: 1,
-    11: 2,
-    12: 3,
-  },
-};
-
-// Ciro Alfredo Galvez Herrera
-const temporalResultsCandidate17 = {
-  id: 53,
-  answers: {
-    1: 3,
-    2: 2,
-    3: 1,
-    4: 1,
-    5: 2,
-    6: 3,
-    7: 3,
-    8: 2,
-    9: 1,
-    10: 1,
-    11: 2,
-    12: 3,
-  },
-};
-
-// George Patrick Forsyth Sommer
-const temporalResultsCandidate18 = {
-  id: 149,
-  answers: {
-    1: 5,
-    2: 4,
-    3: 3,
-    4: 2,
-    5: 1,
-    6: 1,
-    7: 2,
-    8: 3,
-    9: 4,
-    10: 5,
-    11: 4,
-    12: 3,
-  },
-};
-
-// Rafael Bernardo Lopez Aliaga Cazorla
-const temporalResultsCandidate19 = {
-  id: 198,
-  answers: {
-    1: 1,
-    2: 2,
-    3: 3,
-    4: 4,
-    5: 5,
-    6: 5,
-    7: 4,
-    8: 3,
-    9: 2,
-    10: 1,
-    11: 2,
-    12: 3,
-  },
-};
-
-// Andres Avelino Alcantara Paredes
-const temporalResultsCandidate20 = {
-  id: 86,
-  answers: {
-    1: 3,
-    2: 3,
-    3: 3,
-    4: 2,
-    5: 2,
-    6: 2,
-    7: 1,
-    8: 1,
-    9: 1,
-    10: 5,
-    11: 5,
-    12: 5,
-  },
-};
-
-// Jose Alejandro Vega Antonio
-const temporalResultsCandidate21 = {
-  id: 203,
-  answers: {
-    1: 2,
-    2: 3,
-    3: 4,
-    4: 2,
-    5: 3,
-    6: 4,
-    7: 2,
-    8: 3,
-    9: 4,
-    10: 2,
+    10: 3,
     11: 3,
-    12: 4,
+    12: 3,
+    13: 1,
+    14: 5,
+    15: 1,
   },
 };
 
@@ -418,9 +415,6 @@ const temporalCandidateAnswers = [
   temporalResultsCandidate16,
   temporalResultsCandidate17,
   temporalResultsCandidate18,
-  temporalResultsCandidate19,
-  temporalResultsCandidate20,
-  temporalResultsCandidate21,
 ];
 
 async function getCandidateData(url) {
