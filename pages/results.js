@@ -97,7 +97,7 @@ export default function PreguntaPage() {
             <Card>
               <div className="p-6 flex w-full justify-between">
                 <div className="flex">
-                  <div className="flex flex-col">
+                  <div className="flex flex-col min-w-12">
                     <img
                       className="w-12 h-12 bg-neutral-200 rounded-lg object-cover border-neutral-200 border-2"
                       src={candidate.data.profile_photo_url}
