@@ -1,6 +1,20 @@
 import { Facebook, Twitter, Whatsapp } from "./icons";
+import Link from "next/link";
 
 const url = "https://tinder-politico.herokuapp.com";
+const encodedUrl = encodeURIComponent(url);
+const text =
+  "¿No sabes por quién votar? Responde una serie de preguntas y descubre el candidato mas compatible con tus preferencias:";
+
+const twitterUrl = `https://twitter.com/share?url=${encodedUrl}"&text="${encodeURIComponent(
+  text,
+)}`;
+
+const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`;
+
+const whatsappUrl = `whatsapp://send?text=${encodeURIComponent(
+  text,
+)} ${encodedUrl}`;
 
 export default function ShareSection() {
   return (
@@ -10,11 +24,23 @@ export default function ShareSection() {
         {url}
       </button>
       <div className="flex justify-center mb-8">
-        <Twitter />
+        <Link href={twitterUrl}>
+          <a rel="nofollow noopener noreferrer external" target="_blank">
+            <Twitter />
+          </a>
+        </Link>
         <div className="mx-4">
-          <Facebook />
+          <Link href={facebookUrl}>
+            <a rel="nofollow noopener noreferrer external" target="_blank">
+              <Facebook />
+            </a>
+          </Link>
         </div>
-        <Whatsapp />
+        <Link href={whatsappUrl}>
+          <a rel="nofollow noopener noreferrer external" target="_blank">
+            <Whatsapp />
+          </a>
+        </Link>
       </div>
     </div>
   );
