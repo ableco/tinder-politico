@@ -1,9 +1,32 @@
 import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Button from "../../components/Button";
 import Option from "../../components/Option";
 import useLocalStorage from "../../hooks/useLocalStorage";
 import { questions } from "../../utils/questions";
+
+function AnswerItem({ answer, value, selectedAnswer, setSelectedAnswer }) {
+  if (answer == null) {
+    return null;
+  }
+
+  let appearance = "default";
+  if (selectedAnswer !== null) {
+    selectedAnswer === value
+      ? (appearance = "active")
+      : (appearance = "disabled");
+  }
+  function handleSelected(event) {
+    event.preventDefault();
+    setSelectedAnswer((current) => (current === value ? null : value));
+  }
+
+  return (
+    <div className="mb-3 w-full px-4">
+      <Option label={answer} appearance={appearance} onClick={handleSelected} />
+    </div>
+  );
+}
 
 export default function PreguntaPage() {
   const router = useRouter();
@@ -42,6 +65,11 @@ export default function PreguntaPage() {
     }
   }, [router, pid]);
 
+  const shuffledAnswers = useMemo(
+    () => Object.entries(answers).sort(() => Math.random() - 0.5),
+    [answers],
+  );
+
   return (
     <div className="bg-gradient-to-b from-bgGradient-start to-bgGradient-end max-w-2xl mx-auto flex flex-col h-full">
       <div className="py-4 shadow-lg justify-center flex">
@@ -54,34 +82,15 @@ export default function PreguntaPage() {
           {question}
         </h4>
         <div className="flex flex-col items-center flex-1 w-full">
-          {Object.values(answers).map((answer, index) => {
-            let appearance = "default";
-            if (selectedAnswer !== null) {
-              selectedAnswer === index + 1
-                ? (appearance = "active")
-                : (appearance = "disabled");
-            }
-            function handleSelected(event) {
-              event.preventDefault();
-              setSelectedAnswer((current) =>
-                current === index + 1 ? null : index + 1,
-              );
-            }
-
-            if (answer == null) {
-              return null;
-            }
-
-            return (
-              <div className="mb-3 w-full px-4" key={index}>
-                <Option
-                  label={answer}
-                  appearance={appearance}
-                  onClick={handleSelected}
-                />
-              </div>
-            );
-          })}
+          {shuffledAnswers.map(([key, answer]) => (
+            <AnswerItem
+              key={key}
+              answer={answer}
+              value={Number(key.slice(-1))}
+              selectedAnswer={selectedAnswer}
+              setSelectedAnswer={setSelectedAnswer}
+            />
+          ))}
           <div className="my-7">
             <Button
               label="Siguiente"
