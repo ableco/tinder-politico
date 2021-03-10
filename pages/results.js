@@ -80,10 +80,12 @@ export default function PreguntaPage() {
             </span>
             <Link
               href={`https://politicalhub-client.herokuapp.com/candidates/${firstCandidate.data.id}`}
-              rel="nofollow noopener noreferrer external"
-              target="_blank"
             >
-              <a className="font-normal text-lg text-link text-center underline">
+              <a
+                rel="nofollow noopener noreferrer external"
+                target="_blank"
+                className="font-normal text-lg text-link text-center underline"
+              >
                 Ver Perfil
               </a>
             </Link>
@@ -125,10 +127,12 @@ export default function PreguntaPage() {
                     <div>
                       <Link
                         href={`https://politicalhub-client.herokuapp.com/candidates/${candidate.data.id}`}
-                        rel="nofollow noopener noreferrer external"
-                        target="_blank"
                       >
-                        <a className="font-normal text-lg text-link underline">
+                        <a
+                          rel="nofollow noopener noreferrer external"
+                          target="_blank"
+                          className="font-normal text-lg text-link underline"
+                        >
                           Ver Perfil
                         </a>
                       </Link>
