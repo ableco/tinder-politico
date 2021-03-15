@@ -41,6 +41,11 @@ module.exports = {
         start: "#FFFFFF",
         end: "#F6F2FF",
       },
+
+      neutralGradient: {
+        start: "#34215C",
+        end: "#3F305F",
+      },
     },
 
     extend: {
@@ -91,6 +96,7 @@ module.exports = {
       },
       minHeight: {
         16: "4rem",
+        24: "6rem",
       },
       minWidth: {
         12: "3rem",
