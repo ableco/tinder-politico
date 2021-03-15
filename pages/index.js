@@ -1,17 +1,14 @@
-import Head from "next/head";
 import { useRouter } from "next/router";
 import Button from "../components/Button";
 import { Logo } from "../components/icons";
+import OGMetas from "../components/icons/OGMetas";
 
 export default function Home() {
   const router = useRouter();
 
   return (
     <div className="bg-gradient-to-b from-neutralGradient-start to-neutralGradient-end max-w-2xl mx-auto h-full">
-      <Head>
-        <title>Busco Partido</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <OGMetas />
 
       <div className="flex flex-col place-items-center px-12 py-24 h-full justify-center">
         <Logo className="min-h-24" />

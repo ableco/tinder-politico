@@ -8,6 +8,7 @@ import ShareSection from "../components/ShareSection";
 import useLocalStorage from "../hooks/useLocalStorage";
 import titleize from "../utils/titleize";
 import { questionsSize } from "../utils/questions";
+import OGMetas from "../components/icons/OGMetas";
 
 export default function PreguntaPage() {
   const router = useRouter();
@@ -47,6 +48,7 @@ export default function PreguntaPage() {
 
   return (
     <div className="bg-gradient-to-b from-bgGradient-start to-bgGradient-end max-w-2xl mx-auto flex flex-col">
+      <OGMetas />
       <div className="py-4 shadow-lg justify-center flex">
         <h3 className="font-normal text-base text-neutral-800">Resultados</h3>
       </div>

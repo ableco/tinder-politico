@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import { useEffect, useMemo, useState } from "react";
 import Button from "../../components/Button";
+import OGMetas from "../../components/icons/OGMetas";
 import Option from "../../components/Option";
 import useLocalStorage from "../../hooks/useLocalStorage";
 import { questions } from "../../utils/questions";
@@ -72,6 +73,7 @@ export default function PreguntaPage() {
 
   return (
     <div className="bg-gradient-to-b from-bgGradient-start to-bgGradient-end max-w-2xl mx-auto flex flex-col h-full">
+      <OGMetas />
       <div className="py-4 shadow-lg justify-center flex">
         <h3 className="font-normal text-base text-neutral-800">
           Pregunta {id} de {questions.length}
