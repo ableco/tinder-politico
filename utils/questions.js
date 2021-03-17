@@ -105,8 +105,8 @@ export const questions = [
     question:
       "¿Qué opinas sobre la legalización de la unión civil entre personas del mismo sexo?",
     answers: {
-      value1: null,
-      value2: "A favor",
+      value1: "A favor",
+      value2: null,
       value3: "Me da igual",
       value4: null,
       value5: "En contra",
