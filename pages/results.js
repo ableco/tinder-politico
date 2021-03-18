@@ -9,6 +9,32 @@ import useLocalStorage from "../hooks/useLocalStorage";
 import titleize from "../utils/titleize";
 import { questionsSize } from "../utils/questions";
 import OGMetas from "../components/icons/OGMetas";
+import { Instagram } from "../components/icons";
+
+function IGMessage() {
+  return (
+    <div className="border-neutral-400 border-2 rounded-lg px-6 py-4 flex flex-col items-center">
+      <Instagram />
+      <p className="mt-4 text-lg text-center">
+        Tómale screenshot a tus resultados y compártelo en tus stories
+      </p>
+    </div>
+  );
+}
+
+function Disclaimer() {
+  return (
+    <div className="my-8">
+      <p className="text-base font-light text-center text-neutral-700">
+        Este juego está basado en declaraciones, propuestas y planes de gobierno
+        de los partidos y sus candidatos a la presidencia. Te puede ayudar a
+        identificar cuáles se acercan más a tus intereses, pero igual te
+        recomendamos seguir investigando a tus candidatos y conociendo sus
+        posturas políticas, económicas y sociales.
+      </p>
+    </div>
+  );
+}
 
 export default function PreguntaPage() {
   const router = useRouter();
@@ -158,6 +184,8 @@ export default function PreguntaPage() {
           />
         </div>
         <ShareSection />
+        <IGMessage />
+        <Disclaimer />
       </div>
     </div>
   );
