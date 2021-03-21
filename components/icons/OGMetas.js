@@ -3,7 +3,7 @@ import Head from "next/head";
 export default function OGMetas({
   title = "Busco Partido",
   description = "Contesta una serie de preguntas y te decimos que candidato tiene mas compatibilidad contigo.",
-  url = "https://tinder-politico.herokuapp.com/",
+  url = "https://match.yovoto.pe/",
 }) {
   const image = "/open-graph.png";
 

@@ -107,7 +107,7 @@ export default function PreguntaPage() {
               {Number.parseInt(firstCandidate.percentage)}% Compatible
             </span>
             <Link
-              href={`https://politicalhub-client.herokuapp.com/candidates/${firstCandidate.data.id}`}
+              href={`https://www.yovoto.pe/candidates/${firstCandidate.data.id}`}
             >
               <a
                 rel="nofollow noopener noreferrer external"
@@ -154,7 +154,7 @@ export default function PreguntaPage() {
                     </div>
                     <div>
                       <Link
-                        href={`https://politicalhub-client.herokuapp.com/candidates/${candidate.data.id}`}
+                        href={`https://www.yovoto.pe/candidates/${candidate.data.id}`}
                       >
                         <a
                           rel="nofollow noopener noreferrer external"

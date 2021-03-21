@@ -441,13 +441,13 @@ export default async function handler(req, res) {
 
   const candidatesData = await Promise.all([
     getCandidateData(
-      `https://politicalhub-api.herokuapp.com/candidates/${candidates[0].id}?include=political_organization`,
+      `https://api.yovoto.pe/candidates/${candidates[0].id}?include=political_organization`,
     ),
     getCandidateData(
-      `https://politicalhub-api.herokuapp.com/candidates/${candidates[1].id}?include=political_organization`,
+      `https://api.yovoto.pe/candidates/${candidates[1].id}?include=political_organization`,
     ),
     getCandidateData(
-      `https://politicalhub-api.herokuapp.com/candidates/${candidates[2].id}?include=political_organization`,
+      `https://api.yovoto.pe/candidates/${candidates[2].id}?include=political_organization`,
     ),
   ]);
 
