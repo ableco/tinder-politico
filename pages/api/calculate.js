@@ -114,7 +114,7 @@ const temporalResultsCandidate5 = {
 const temporalResultsCandidate6 = {
   id: 75,
   answers: {
-    1: 2,
+    1: 5,
     2: 5,
     3: 5,
     4: 5,
@@ -246,7 +246,7 @@ const temporalResultsCandidate11 = {
 const temporalResultsCandidate12 = {
   id: 206,
   answers: {
-    1: 2,
+    1: 5,
     2: 5,
     3: 5,
     4: 5,
@@ -268,7 +268,7 @@ const temporalResultsCandidate12 = {
 const temporalResultsCandidate13 = {
   id: 189,
   answers: {
-    1: 2,
+    1: 5,
     2: 5,
     3: 5,
     4: 3,

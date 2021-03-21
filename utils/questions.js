@@ -5,7 +5,7 @@ export const questions = [
       "¿Cuál es tu postura sobre la Constitución Política del Perú de 1993?",
     answers: {
       value1: "Debe hacerse una nueva",
-      value2: "Se debe someter a votación si queremos una nueva o no",
+      value2: null,
       value3: "Algunas partes deben ser modificadas",
       value4: null,
       value5:
@@ -115,7 +115,7 @@ export const questions = [
   {
     id: 10,
     question:
-      "¿Cuál es tu postura frente a la deportación de extranjeros ilegales?",
+      "¿Cuál es tu postura frente a la deportación de extranjeros indocumentados?",
     answers: {
       value1: "En contra, se debe ayudar, no deportar",
       value2: null,
