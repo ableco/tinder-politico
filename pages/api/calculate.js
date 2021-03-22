@@ -26,7 +26,7 @@ const temporalResultsCandidate1 = {
 const temporalResultsCandidate2 = {
   id: 130,
   answers: {
-    1: 3,
+    1: 2,
     2: 5,
     3: 5,
     4: 5,
@@ -48,7 +48,7 @@ const temporalResultsCandidate2 = {
 const temporalResultsCandidate3 = {
   id: 108,
   answers: {
-    1: 3,
+    1: 2,
     2: 5,
     3: 5,
     4: 5,
@@ -180,7 +180,7 @@ const temporalResultsCandidate8 = {
 const temporalResultsCandidate9 = {
   id: 9,
   answers: {
-    1: 5,
+    1: 3,
     2: 5,
     3: 5,
     4: 3,
@@ -202,7 +202,7 @@ const temporalResultsCandidate9 = {
 const temporalResultsCandidate10 = {
   id: 97,
   answers: {
-    1: 5,
+    1: 3,
     2: 1,
     3: 1,
     4: 3,
@@ -290,7 +290,7 @@ const temporalResultsCandidate13 = {
 const temporalResultsCandidate14 = {
   id: 119,
   answers: {
-    1: 3,
+    1: 2,
     2: 5,
     3: 3,
     4: 3,
@@ -334,7 +334,7 @@ const temporalResultsCandidate15 = {
 const temporalResultsCandidate16 = {
   id: 149,
   answers: {
-    1: 3,
+    1: 2,
     2: 5,
     3: 5,
     4: 5,
@@ -356,7 +356,7 @@ const temporalResultsCandidate16 = {
 const temporalResultsCandidate17 = {
   id: 198,
   answers: {
-    1: 3,
+    1: 2,
     2: 5,
     3: 5,
     4: 5,

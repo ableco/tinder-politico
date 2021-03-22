@@ -5,11 +5,11 @@ export const questions = [
       "¿Cuál es tu postura sobre la Constitución Política del Perú de 1993?",
     answers: {
       value1: "Debe hacerse una nueva",
-      value2: null,
-      value3: "Algunas partes deben ser modificadas",
-      value4: null,
-      value5:
+      value2: "Algunas partes deben ser modificadas",
+      value3:
         "Más allá de mi postura, se debe someter a votación si todos los peruanos queremos una nueva o no",
+      value4: null,
+      value5: "Debe quedarse como está",
     },
   },
   {
