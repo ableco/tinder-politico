@@ -16,7 +16,7 @@ export default function Home() {
           Descubre tu match politico
         </h2>
         <h3 className="text-xl text-neutral-400 text-center my-8 font-light">
-          Contesta una serie de preguntas y te decimos que candidato tiene mas
+          Contesta estas preguntas y te diremos qué candidato tiene más
           compatibilidad contigo.
         </h3>
         <Button label="¡Empieza!" onClick={() => router.push("/preguntas/1")} />
