@@ -2,7 +2,7 @@ import Head from "next/head";
 
 export default function OGMetas({
   title = "Busco Partido",
-  description = "Contesta una serie de preguntas y te decimos que candidato tiene mas compatibilidad contigo.",
+  description = "Contesta estas preguntas y te diremos qué candidato tiene más compatibilidad contigo.",
   url = "https://match.yovoto.pe/",
 }) {
   const image = "/open-graph.png";
