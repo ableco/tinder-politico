@@ -27,7 +27,7 @@ export default function RestCandidate({ candidate, number }) {
                 alt={titleize(candidate.data.political_organization.name)}
               />
             </div>
-            <div className="mx-3 flex flex-col justify-between">
+            <div className="mx-3 flex flex-col justify-start">
               <div>
                 <p className="font-medium text-xl text-neutral-800">
                   {titleize(
