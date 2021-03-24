@@ -428,33 +428,50 @@ export default async function handler(req, res) {
     query: { results },
   } = req;
 
-  let candidates = temporalCandidateAnswers
-    .map((canditate) => ({
-      id: canditate.id,
-      percentage: calculateAveragePercentage(
-        JSON.parse(results),
-        canditate.answers,
-      ),
-    }))
-    .sort((a, b) => b.percentage - a.percentage)
-    .slice(0, 3);
+  let candidates = Object.entries(
+    temporalCandidateAnswers
+      .map((canditate) => ({
+        id: canditate.id,
+        percentage: calculateAveragePercentage(
+          JSON.parse(results),
+          canditate.answers,
+        ).toFixed(1),
+      }))
+      // eslint-disable-next-line unicorn/no-array-reduce
+      .reduce((acc, element) => {
+        const percentage = (acc[element.percentage] =
+          acc[element.percentage] || []);
+        percentage.push(element);
+        return acc;
+      }, {}),
+  ).sort(([a], [b]) => b - a);
 
-  const candidatesData = await Promise.all([
+  const candidatesResultSize =
+    candidates[0][1].length > 1 ? candidates[0][1].length + 2 : 3;
+
+  candidates = candidates
+    .map(([_key, elements]) => elements)
+    .flat()
+    .slice(0, candidatesResultSize);
+
+  const arrayCandidatesPromises = Array.apply(
+    null,
+    // eslint-disable-next-line unicorn/new-for-builtins
+    Array(candidatesResultSize),
+  ).map((_val, idx) =>
     getCandidateData(
-      `https://api.yovoto.pe/candidates/${candidates[0].id}?include=political_organization`,
+      `https://api.yovoto.pe/candidates/${candidates[idx].id}?include=political_organization`,
     ),
-    getCandidateData(
-      `https://api.yovoto.pe/candidates/${candidates[1].id}?include=political_organization`,
-    ),
-    getCandidateData(
-      `https://api.yovoto.pe/candidates/${candidates[2].id}?include=political_organization`,
-    ),
-  ]);
+  );
+
+  const candidatesData = await Promise.all(arrayCandidatesPromises);
 
   candidates = candidates.map((candidate, index) => ({
     ...candidate,
     data: candidatesData[index].candidate,
   }));
 
-  res.status(200).json({ candidates });
+  res.status(200).json({
+    candidates,
+  });
 }
