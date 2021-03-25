@@ -1,4 +1,5 @@
 import calculateAveragePercentage from "../../utils/calculateAveragePercentage";
+import { candidates as allCandidatesData } from "../../data/candidates.json";
 
 // Yonhy Lescano Ancieta
 const temporalResultsCandidate1 = {
@@ -417,13 +418,7 @@ const temporalCandidateAnswers = [
   temporalResultsCandidate18,
 ];
 
-async function getCandidateData(url) {
-  const response = await fetch(url);
-  const data = await response.json();
-  return data;
-}
-
-export default async function handler(req, res) {
+export default function handler(req, res) {
   const {
     query: { results },
   } = req;
@@ -454,21 +449,19 @@ export default async function handler(req, res) {
     .flat()
     .slice(0, candidatesResultSize);
 
-  const arrayCandidatesPromises = Array.apply(
+  const candidatesData = Array.apply(
     null,
     // eslint-disable-next-line unicorn/new-for-builtins
     Array(candidatesResultSize),
   ).map((_val, idx) =>
-    getCandidateData(
-      `https://api.yovoto.pe/candidates/${candidates[idx].id}?include=political_organization`,
+    allCandidatesData.find(
+      (candidateData) => candidateData.id === candidates[idx].id,
     ),
   );
 
-  const candidatesData = await Promise.all(arrayCandidatesPromises);
-
   candidates = candidates.map((candidate, index) => ({
     ...candidate,
-    data: candidatesData[index].candidate,
+    data: candidatesData[index],
   }));
 
   res.status(200).json({
