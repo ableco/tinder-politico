@@ -30,3 +30,11 @@ div#__next {
   height: auto !important;
   min-height: 100%;
 }
+
+.logo {
+  transform: translateX(22%);
+}
+
+.grayscale {
+  filter: grayscale(100%);
+}
