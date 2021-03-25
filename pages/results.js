@@ -1,10 +1,10 @@
 import { useEffect } from "react";
 import { useRouter } from "next/router";
-import { useQuery } from "react-query";
 import Button from "../components/Button";
 import ShareSection from "../components/ShareSection";
 import useLocalStorage from "../hooks/useLocalStorage";
 import { questionsSize } from "../utils/questions";
+import calculateResults from "../utils/calculateResults";
 import OGMetas from "../components/icons/OGMetas";
 import { Instagram } from "../components/icons";
 import RestCandidate from "../components/RestCandidate";
@@ -36,12 +36,15 @@ function Disclaimer() {
 
 export default function PreguntaPage() {
   const router = useRouter();
-  const [results, setResults] = useLocalStorage("results");
-  const { isLoading, error, data } = useQuery("calculation", () =>
-    fetch(`/api/calculate?results=${JSON.stringify(results)}`).then((res) =>
-      res.json(),
-    ),
-  );
+  const [results, setResults] = useLocalStorage("results", {});
+
+  const candidates = calculateResults(results);
+
+  // eslint-disable-next-line unicorn/prefer-negative-index
+  const firstCandidates = candidates.slice(0, candidates.length - 2);
+
+  // eslint-disable-next-line unicorn/prefer-negative-index
+  const restCandidates = candidates.slice(candidates.length - 2);
 
   function handlePlayAgain() {
     setResults({});
@@ -59,20 +62,6 @@ export default function PreguntaPage() {
       router.push("/");
     }
   }, [router, results]);
-
-  if (isLoading) return null;
-
-  if (error) return null;
-
-  if (data === undefined || data === null) return null;
-
-  const { candidates } = data;
-
-  // eslint-disable-next-line unicorn/prefer-negative-index
-  const firstCandidates = candidates.slice(0, candidates.length - 2);
-
-  // eslint-disable-next-line unicorn/prefer-negative-index
-  const restCandidates = candidates.slice(candidates.length - 2);
 
   return (
     <div className="bg-gradient-to-b from-bgGradient-start to-bgGradient-end max-w-2xl mx-auto flex flex-col">

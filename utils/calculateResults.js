@@ -1,5 +1,5 @@
-import calculateAveragePercentage from "../../utils/calculateAveragePercentage";
-import { candidates as allCandidatesData } from "../../data/candidates.json";
+import calculateAveragePercentage from "./calculateAveragePercentage";
+import { candidates as allCandidatesData } from "../data/candidates.json";
 
 // Yonhy Lescano Ancieta
 const temporalResultsCandidate1 = {
@@ -418,53 +418,51 @@ const temporalCandidateAnswers = [
   temporalResultsCandidate18,
 ];
 
-export default function handler(req, res) {
-  const {
-    query: { results },
-  } = req;
+export default function calculateResults(results) {
+  try {
+    let candidates = Object.entries(
+      temporalCandidateAnswers
+        .map((candidate) => ({
+          id: candidate.id,
+          percentage: calculateAveragePercentage(
+            results,
+            candidate.answers,
+          ).toFixed(1),
+        }))
+        // eslint-disable-next-line unicorn/no-array-reduce
+        .reduce((acc, element) => {
+          const percentage = (acc[element.percentage] =
+            acc[element.percentage] || []);
+          percentage.push(element);
+          return acc;
+        }, {}),
+    ).sort(([a], [b]) => b - a);
 
-  let candidates = Object.entries(
-    temporalCandidateAnswers
-      .map((canditate) => ({
-        id: canditate.id,
-        percentage: calculateAveragePercentage(
-          JSON.parse(results),
-          canditate.answers,
-        ).toFixed(1),
-      }))
-      // eslint-disable-next-line unicorn/no-array-reduce
-      .reduce((acc, element) => {
-        const percentage = (acc[element.percentage] =
-          acc[element.percentage] || []);
-        percentage.push(element);
-        return acc;
-      }, {}),
-  ).sort(([a], [b]) => b - a);
+    const candidatesResultSize =
+      candidates[0][1].length > 1 ? candidates[0][1].length + 2 : 3;
 
-  const candidatesResultSize =
-    candidates[0][1].length > 1 ? candidates[0][1].length + 2 : 3;
+    candidates = candidates
+      .map(([_key, elements]) => elements)
+      .flat()
+      .slice(0, candidatesResultSize);
 
-  candidates = candidates
-    .map(([_key, elements]) => elements)
-    .flat()
-    .slice(0, candidatesResultSize);
+    const candidatesData = Array.apply(
+      null,
+      // eslint-disable-next-line unicorn/new-for-builtins
+      Array(candidatesResultSize),
+    ).map((_val, idx) =>
+      allCandidatesData.find(
+        (candidateData) => candidateData.id === candidates[idx].id,
+      ),
+    );
 
-  const candidatesData = Array.apply(
-    null,
-    // eslint-disable-next-line unicorn/new-for-builtins
-    Array(candidatesResultSize),
-  ).map((_val, idx) =>
-    allCandidatesData.find(
-      (candidateData) => candidateData.id === candidates[idx].id,
-    ),
-  );
+    candidates = candidates.map((candidate, index) => ({
+      ...candidate,
+      data: candidatesData[index],
+    }));
 
-  candidates = candidates.map((candidate, index) => ({
-    ...candidate,
-    data: candidatesData[index],
-  }));
-
-  res.status(200).json({
-    candidates,
-  });
+    return candidates;
+  } catch {
+    return [];
+  }
 }
