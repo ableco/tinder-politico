@@ -11,13 +11,20 @@ module.exports = {
       transparent: "transparent",
 
       white: "#FFFFFF",
-      black: "#191E33",
+      black: "#000000",
+      green: "#95F2C3",
 
       link: "#1F90F8",
       secondary: "#FF7171",
 
       primary: {
         base: "#2270FD",
+      },
+
+      gray: {
+        base: "#9A9A9A",
+        light: "#E2E2E2",
+        lighter: "#F5F5F5",
       },
 
       neutral: {
