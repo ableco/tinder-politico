@@ -19,7 +19,7 @@ export const questions = [
       value1:
         "El Estado debe fiscalizar, pero también debe ser dueño de empresas",
       value2: null,
-      value3: null,
+      value3: "No tengo posición",
       value4: null,
       value5:
         "Las empresas deben ser privadas y el Estado solo tiene que fiscalizarlas",
@@ -41,8 +41,8 @@ export const questions = [
     question: "¿El Estado debe controlar los precios?",
     answers: {
       value1: "Sí, siempre",
-      value2: null,
-      value3: "Solo para ciertos productos o servicios",
+      value2: "Solo para ciertos productos o servicios",
+      value3: "No tengo posición",
       value4: null,
       value5: "No, nunca",
     },
@@ -53,8 +53,8 @@ export const questions = [
       "Sobre la concentración de poder en el mercado (que solo un grupo o muy pocos dominen la oferta de un producto o servicio)...",
     answers: {
       value1: "No debe haber concentración de poder en el mercado nunca",
-      value2: null,
-      value3: "Solo debe haber si el Estado lo regula",
+      value2: "Solo debe haber si el Estado lo regula",
+      value3: "No tengo posición",
       value4: null,
       value5:
         "No hay problema con que haya concentración de poder en el mercado",
@@ -170,9 +170,9 @@ export const questions = [
     answers: {
       value1:
         "Se les debe dar una licencia que se renueve cada cierto tiempo por parte de la SUNEDU/MINEDU",
-      value2: null,
-      value3:
+      value2:
         "Se les debe dar una sola licencia válida para siempre por parte de la SUNEDU/MINEDU",
+      value3: "No tengo posición",
       value4: null,
       value5:
         "No deberían necesitar licenciamiento o lo deberían hacer terceros privados",
