@@ -15,7 +15,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="bg-white max-w-2xl mx-auto h-full overflow-hidden min-h-screen">
+    <div className="bg-greenBackground max-w-2xl mx-auto h-full overflow-hidden min-h-screen">
       <OGMetas />
 
       <div className="flex flex-col place-items-center px-12 py-24 h-full justify-center min-h-screen">

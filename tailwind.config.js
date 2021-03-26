@@ -13,6 +13,7 @@ module.exports = {
       white: "#FFFFFF",
       black: "#000000",
       green: "#95F2C3",
+      greenBackground: "#A9E5BB",
 
       link: "#1F90F8",
       secondary: "#FF7171",
