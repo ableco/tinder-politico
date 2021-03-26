@@ -38,3 +38,43 @@ div#__next {
 .grayscale {
   filter: grayscale(100%);
 }
+
+@font-face {
+  font-family: "Acto";
+  src: url("/fonts/Acto/Acto-Regular.otf");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Acto";
+  src: url("/fonts/Acto/Acto-Medium.otf");
+  font-style: medium;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Acto";
+  src: url("/fonts/Acto/Acto-Bold.otf");
+  font-style: bold;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Acto";
+  src: url("/fonts/Acto/Acto-ExtraBold.otf");
+  font-style: bold;
+  font-weight: 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Acto";
+  src: url("/fonts/Acto/Acto-Light.otf");
+  font-style: light;
+  font-weight: 300;
+  font-display: swap;
+}

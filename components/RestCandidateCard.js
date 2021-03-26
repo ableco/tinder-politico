@@ -35,7 +35,7 @@ export default function RestCandidateCard({ candidate }) {
                   </p>
                 </a>
               </Link>
-              <p className="font-extrabold text-sm text-gray-base uppercase">
+              <p className="font-extrabold text-xs text-gray-base uppercase">
                 {titleize(candidate.data.political_organization.name)}
               </p>
             </div>

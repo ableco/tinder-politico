@@ -26,7 +26,7 @@ export default function Home() {
         <h2 className="text-4xl text-black text-center mb-2 font-extrabold">
           ¿Con cuál partido político simpatizas?
         </h2>
-        <h3 className="text-2xl text-black text-center mb-4 font-light">
+        <h3 className="text-2xl text-black text-center mb-4 font-medium">
           Este test te lo dirá
         </h3>
         <Button
