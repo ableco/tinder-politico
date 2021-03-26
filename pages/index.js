@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 import Button from "../components/Button";
@@ -37,9 +38,17 @@ export default function Home() {
           <p className="text-sm font-bold text-black">En alianza con:</p>
           <div className="flex flex-row justify-center items-center mt-4">
             <div className="mr-3">
-              <HazteUna />
+              <Link href="https://www.instagram.com/hazteuna_/">
+                <a rel="nofollow noopener noreferrer external" target="_blank">
+                  <HazteUna />
+                </a>
+              </Link>
             </div>
-            <ImpulsoPais />
+            <Link href="https://www.instagram.com/impulsopais/">
+              <a rel="nofollow noopener noreferrer external" target="_blank">
+                <ImpulsoPais />
+              </a>
+            </Link>
           </div>
         </div>
       </div>
