@@ -31,7 +31,7 @@ const temporalResultsCandidate2 = {
     2: 5,
     3: 5,
     4: 5,
-    5: 3,
+    5: 2,
     6: 2,
     7: 5,
     8: 3,
