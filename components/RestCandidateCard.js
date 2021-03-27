@@ -6,7 +6,9 @@ export default function RestCandidateCard({ candidate }) {
     <div className="mb-5 w-full">
       <div className="flex px-1 w-full justify-between">
         <div className="flex items-center">
-          <Link href={`https://www.yovoto.pe/candidates/${candidate.data.id}`}>
+          <Link
+            href={`https://www.yovoto.pe/candidates/${candidate.data.id}?activeTab=Perfil+Político`}
+          >
             <a rel="nofollow noopener noreferrer external" target="_blank">
               <img
                 className="w-12 h-12 bg-white rounded-full object-cover border-white border-2 shadow-button grayscale"
@@ -25,7 +27,7 @@ export default function RestCandidateCard({ candidate }) {
           <div className="mx-3 flex flex-col justify-start">
             <div>
               <Link
-                href={`https://www.yovoto.pe/candidates/${candidate.data.id}`}
+                href={`https://www.yovoto.pe/candidates/${candidate.data.id}?activeTab=Perfil+Político`}
               >
                 <a rel="nofollow noopener noreferrer external" target="_blank">
                   <p className="font-extrabold text-xl text-black">

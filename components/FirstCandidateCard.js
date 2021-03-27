@@ -5,7 +5,9 @@ export default function FirstCandidateCard({ candidate, size }) {
   return (
     <div className="px-2 sm:px-4 md:px-16 py-6 flex flex-col items-center justify-center flex-1">
       <div className="flex flex-row relative">
-        <Link href={`https://www.yovoto.pe/candidates/${candidate.data.id}`}>
+        <Link
+          href={`https://www.yovoto.pe/candidates/${candidate.data.id}?activeTab=Perfil+Político`}
+        >
           <a rel="nofollow noopener noreferrer external" target="_blank">
             <img
               className={`${
@@ -24,7 +26,9 @@ export default function FirstCandidateCard({ candidate, size }) {
           alt={candidate.data.political_organization.name}
         />
       </div>
-      <Link href={`https://www.yovoto.pe/candidates/${candidate.data.id}`}>
+      <Link
+        href={`https://www.yovoto.pe/candidates/${candidate.data.id}?activeTab=Perfil+Político`}
+      >
         <a rel="nofollow noopener noreferrer external" target="_blank">
           <h4
             className={`${

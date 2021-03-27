@@ -57,7 +57,7 @@ export default function PreguntaPage() {
           ))}
         </div>
         <div className="w-52 h-52 flex flex-col justify-center items-center bg-green shadow-xl rounded-full px-6 py-1 mt-2 mb-8">
-          <span className="font-extrabold text-center text-6xl text-black">
+          <span className="font-extrabold text-center text-5xl text-black">
             {firstCandidates?.[0]?.percentage}%
           </span>
           <span className="font-extrabold text-center text-sm text-black mt-1">
