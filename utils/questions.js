@@ -157,10 +157,10 @@ export const questions = [
         "El estado debería financiar las pensiones para todos a través de impuestos principalmente",
       value2:
         "Cada trabajador ahorraría para su vejez en un sistema de fondo individual, y el estado financia con impuestos las pensiones de quienes necesiten",
-      value3: null,
-      value4:
+      value3:
         "Cada trabajador ahorraría para su vejez en un sistema de fondo individual, aportando una parte a un fondo solidario para garantizar las pensiones de quienes necesiten",
-      value5: null,
+      value4: null,
+      value5: "No tengo posición",
     },
   },
   {
