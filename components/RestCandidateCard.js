@@ -6,18 +6,18 @@ export default function RestCandidateCard({ candidate }) {
     <div className="mb-5 w-full">
       <div className="flex px-1 w-full justify-between">
         <div className="flex items-center">
-          <div className="flex items-center justify-center flex-col xs:flex-col sm:flex-row md:flex-row">
+          <div className="flex items-center justify-center flex-col xs:flex-col sm:flex-row md:flex-row relative">
             <img
-              className="w-12 h-12 bg-white rounded-full object-cover border-white border-2 shadow-button grayscale"
+              className="min-w-12 w-12 h-12 bg-white rounded-full shadow-button object-cover border-white border-2 grayscale"
               src={candidate.data.profile_photo_url}
               alt={titleize(
                 `${candidate.data.names}  ${candidate.data.family_name}`,
               )}
             />
             <img
-              className="w-7 h-7 bg-white rounded-sm object-cover border-white border-2 shadow-button ml-0 sm:ml-2 md:ml-2 mt-2 sm:mt-0 md:mt-0"
+              className="absolute -bottom-3 left-1/3 w-5 h-5 bg-white rounded-lg object-cover shadow-button border-white border-2"
               src={candidate.data.political_organization.logo}
-              alt={titleize(candidate.data.political_organization.name)}
+              alt={candidate.data.political_organization.name}
             />
           </div>
           <div className="mx-3 flex flex-col justify-start">
@@ -30,24 +30,24 @@ export default function RestCandidateCard({ candidate }) {
               <p className="font-extrabold text-xs text-gray-base uppercase">
                 {titleize(candidate.data.political_organization.name)}
               </p>
-              <Link
-                href={`https://www.yovoto.pe/candidates/${candidate.data.id}?activeTab=Perfil+Político`}
-              >
-                <a
-                  rel="nofollow noopener noreferrer external"
-                  target="_blank"
-                  className="font-extrabold text-black text-center underline mt-1 mb-1"
-                >
-                  Ver resultados
-                </a>
-              </Link>
             </div>
           </div>
         </div>
         <div>
-          <p className="block bg-green rounded-full text-black px-4 py-2 font-extrabold text-xl">
+          <p className="block bg-gradient-to-l from-successGradient-start to-successGradient-end rounded-full text-black text-center px-4 py-2 font-extrabold text-xl mb-1">
             {candidate.percentage}%
           </p>
+          <Link
+            href={`https://www.yovoto.pe/candidates/${candidate.data.id}?activeTab=Perfil+Político`}
+          >
+            <a
+              rel="nofollow noopener noreferrer external"
+              target="_blank"
+              className="font-extrabold text-black text-xs xs:text-xs sm:text-sm md:text-sm text-center underline"
+            >
+              Ver resultados
+            </a>
+          </Link>
         </div>
       </div>
     </div>

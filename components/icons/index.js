@@ -3,7 +3,6 @@ import Twitter from "./Twitter";
 import Whatsapp from "./Whatsapp";
 import Instagram from "./Instagram";
 import Logo from "./Logo";
-import TuDecides from "./TuDecides";
 import HazteUna from "./HazteUna";
 import ImpulsoPais from "./ImpulsoPais";
 import Back from "./Back";
@@ -14,7 +13,6 @@ export {
   Whatsapp,
   Logo,
   Instagram,
-  TuDecides,
   HazteUna,
   ImpulsoPais,
   Back,

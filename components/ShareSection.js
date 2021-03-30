@@ -17,34 +17,32 @@ const whatsappUrl = `whatsapp://send?text=${encodeURIComponent(
   text,
 )} ${encodedUrl}`;
 
-export default function ShareSection({ showClipboard = false }) {
+export default function ShareSection() {
   const [isCopied, setCopied] = useCopyClipboard(url, {
     successDuration: 1000,
   });
 
   return (
-    <div className="flex flex-col items-center mt-6">
-      <p className="font-bold text-lg">Comparte la trivia</p>
-      {showClipboard && (
-        <div className="flex flex-col relative">
-          <button
-            onClick={setCopied}
-            className="font-light border-neutral-400 border-2 bg-white text-base px-6 py-3 mt-3 rounded-lg focus:outline-none"
-          >
-            {isCopied ? "Copiado" : url}
-          </button>
-        </div>
-      )}
-      <div className="flex justify-center mt-3 mb-8">
-        <Link href={facebookUrl}>
+    <div className="flex flex-col items-center">
+      <p className="font-normal text-lg">Comparte este juego en tus redes:</p>
+      <div className="flex flex-col relative">
+        <button
+          onClick={setCopied}
+          className="font-light border-neutral-400 border-2 bg-white text-base px-6 py-3 my-3 rounded-lg focus:outline-none"
+        >
+          {isCopied ? "Copiado" : url}
+        </button>
+      </div>
+      <div className="flex justify-center mb-8">
+        <Link href={twitterUrl}>
           <a rel="nofollow noopener noreferrer external" target="_blank">
-            <Facebook />
+            <Twitter />
           </a>
         </Link>
         <div className="mx-4">
-          <Link href={twitterUrl}>
+          <Link href={facebookUrl}>
             <a rel="nofollow noopener noreferrer external" target="_blank">
-              <Twitter />
+              <Facebook />
             </a>
           </Link>
         </div>

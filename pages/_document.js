@@ -11,34 +11,8 @@ class MyDocument extends Document {
       <Html>
         <Head>
           <link
-            rel="preload"
-            href="/fonts/Acto/Acto-Regular.ttf"
-            as="font"
-            crossOrigin=""
-          />
-          <link
-            rel="preload"
-            href="/fonts/Acto/Acto-Medium.ttf"
-            as="font"
-            crossOrigin=""
-          />
-          <link
-            rel="preload"
-            href="/fonts/Acto/Acto-Bold.ttf"
-            as="font"
-            crossOrigin=""
-          />
-          <link
-            rel="preload"
-            href="/fonts/Acto/Acto-ExtraBold.ttf"
-            as="font"
-            crossOrigin=""
-          />
-          <link
-            rel="preload"
-            href="/fonts/Acto/Acto-Light.ttf"
-            as="font"
-            crossOrigin=""
+            href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500&display=swap"
+            rel="stylesheet"
           />
         </Head>
         <body>

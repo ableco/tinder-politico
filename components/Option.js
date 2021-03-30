@@ -7,16 +7,11 @@
  * @param {String} label - the text that displays this button
  * @returns
  */
-export default function Option({
-  appearance = "default",
-  label,
-  letter,
-  ...props
-}) {
+export default function Option({ appearance = "default", label, ...props }) {
   const styles = {
-    default: "bg-white text-neutral-700 shadow-button ",
-    gray: "bg-gray-lighter text-black text-left",
-    black: "bg-black text-white text-left",
+    default: "bg-white text-black shadow-button ",
+    gray: "bg-gray-lighter text-black",
+    black: "bg-black text-white",
     disabled: "bg-white text-neutral-400 shadow-button ",
     active:
       "bg-gradient-to-r from-successGradient-start to-successGradient-end text-white shadow-button",
@@ -24,10 +19,10 @@ export default function Option({
 
   return (
     <button
-      className={`${styles[appearance]} font-medium text-xl rounded-2xl px-8 py-2 focus:outline-none w-full`}
+      className={`${styles[appearance]} font-normal text-xl rounded-2xl px-8 py-2 focus:outline-none w-full`}
       {...props}
     >
-      {letter}. {label}
+      {label}
     </button>
   );
 }

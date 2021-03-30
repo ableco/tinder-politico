@@ -7,6 +7,9 @@ import { questionsSize } from "../utils/questions";
 import calculateResults from "../utils/calculateResults";
 import OGMetas from "../components/OGMetas";
 import RestCandidateCard from "../components/RestCandidateCard";
+// import FirstCandidateCard from "../components/FirstCandidateCard";
+import IGMessage from "../components/IGMessage";
+import Disclaimer from "../components/Disclaimer";
 import FirstCandidateCard from "../components/FirstCandidateCard";
 
 export default function PreguntaPage() {
@@ -39,14 +42,12 @@ export default function PreguntaPage() {
   }, [router, results]);
 
   return (
-    <div className="bg-gradient-to-b from-bgGradient-start to-bgGradient-end max-w-2xl mx-auto flex flex-col items-center min-h-screen">
+    <div className="bg-gradient-to-b from-bgGradient-start to-bgGradient-end max-w-2xl mx-auto flex flex-col">
       <OGMetas />
-      <div className="mt-8 justify-center flex">
-        <h3 className="font-extrabold text-xl text-black">
-          Tu match político es...
-        </h3>
+      <div className="py-4 shadow-lg justify-center flex">
+        <h3 className="font-normal text-base text-black">Resultados</h3>
       </div>
-      <div className="flex flex-col items-center flex-1 p-4 pt-0">
+      <div className="flex flex-col items-center flex-1 p-4">
         <div className="flex items-start">
           {firstCandidates.map((firstCandidate) => (
             <FirstCandidateCard
@@ -56,7 +57,7 @@ export default function PreguntaPage() {
             />
           ))}
         </div>
-        <div className="w-52 h-52 flex flex-col justify-center items-center bg-green shadow-xl rounded-full px-6 py-1 mt-2 mb-8">
+        <div className="w-52 h-52 flex flex-col justify-center items-center bg-gradient-to-l from-successGradient-start to-successGradient-end shadow-xl rounded-full px-6 py-1 mt-2 mb-8">
           <span className="font-extrabold text-center text-5xl text-black">
             {firstCandidates?.[0]?.percentage}%
           </span>
@@ -74,14 +75,16 @@ export default function PreguntaPage() {
             <RestCandidateCard key={candidate?.id} candidate={candidate} />
           ))}
         </div>
-        <div className="mt-7">
+        <div className="m-7">
           <Button
-            label="Jugar de nuevo"
-            appearance="black"
+            label="Juega de Nuevo"
+            appearance="default"
             onClick={handlePlayAgain}
           />
         </div>
         <ShareSection />
+        <IGMessage />
+        <Disclaimer />
       </div>
     </div>
   );
