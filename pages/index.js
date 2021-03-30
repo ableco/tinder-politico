@@ -24,12 +24,12 @@ export default function Home() {
           Descubre tu match politico
         </h2>
         <h3 className="text-xl text-neutral-400 text-center my-8 font-light">
-          Contesta estas preguntas y te diremos qué candidato tiene más
-          compatibilidad contigo.
+          Encuentra al candidato que tiene posturas más compatibles con las
+          tuyas. Pero recuerda que nada ni nadie debe decirte por quién votar,
+          esa decisión es tuya.
         </h3>
         <Button label="¡Empieza!" onClick={() => router.push("/preguntas/1")} />
         <div className="flex flex-col justify-center items-center mt-16">
-          <p className="text-sm font-bold text-white">En alianza con:</p>
           <div className="flex flex-row justify-center items-center mt-4">
             <div className="mr-3">
               <Link href="https://www.instagram.com/hazteuna_/">
