@@ -15,15 +15,15 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="bg-gradient-to-b from-neutralGradient-start to-neutralGradient-end max-w-2xl mx-auto h-full overflow-hidden min-h-screen">
+    <div className="bg-gradient-to-tr from-neutralGradient-start to-neutralGradient-end max-w-2xl mx-auto h-full overflow-hidden min-h-screen">
       <OGMetas />
 
       <div className="flex flex-col place-items-center px-12 py-24 h-full justify-center min-h-screen">
-        <img src="/logo.png" alt="Logo" className="mb-11" />
-        <h2 className="text-3xl text-white text-center mt-8 font-medium">
+        <img src="/logo.png" alt="Logo" className="mb-4" />
+        <h2 className="text-4xl text-white text-center mt-4 font-medium italic">
           Descubre tu match politico
         </h2>
-        <h3 className="text-xl text-neutral-400 text-center my-8 font-light">
+        <h3 className="text-xl text-neutral-400 text-center my-8 font-bold">
           Encuentra al candidato que tiene posturas más compatibles con las
           tuyas. Pero recuerda que nada ni nadie debe decirte por quién votar,
           esa decisión es tuya.

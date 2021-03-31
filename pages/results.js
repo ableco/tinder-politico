@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useRouter } from "next/router";
+import Link from "next/link";
 import Button from "../components/Button";
 import ShareSection from "../components/ShareSection";
 import useLocalStorage from "../hooks/useLocalStorage";
@@ -7,10 +8,10 @@ import { questionsSize } from "../utils/questions";
 import calculateResults from "../utils/calculateResults";
 import OGMetas from "../components/OGMetas";
 import RestCandidateCard from "../components/RestCandidateCard";
-// import FirstCandidateCard from "../components/FirstCandidateCard";
 import IGMessage from "../components/IGMessage";
 import Disclaimer from "../components/Disclaimer";
 import FirstCandidateCard from "../components/FirstCandidateCard";
+import { HazteUna, ImpulsoPais } from "../components/icons";
 
 export default function PreguntaPage() {
   const router = useRouter();
@@ -44,8 +45,23 @@ export default function PreguntaPage() {
   return (
     <div className="bg-gradient-to-b from-bgGradient-start to-bgGradient-end max-w-2xl mx-auto flex flex-col">
       <OGMetas />
-      <div className="py-4 shadow-lg justify-center flex">
+      <div className="py-4 shadow-lg justify-between items-center flex flex-col xs:flex-col sm:flex-row md:flex-row">
+        <div className="w-36" />
         <h3 className="font-normal text-base text-black">Resultados</h3>
+        <div className="flex flex-row justify-center items-center mt-2 xs:mt-2 sm:mt-0 md:mt-0">
+          <div className="mr-3">
+            <Link href="https://www.instagram.com/impulsopais/">
+              <a rel="nofollow noopener noreferrer external" target="_blank">
+                <ImpulsoPais height="32px" />
+              </a>
+            </Link>
+          </div>
+          <Link href="https://www.instagram.com/hazteuna_/">
+            <a rel="nofollow noopener noreferrer external" target="_blank">
+              <HazteUna textcolor="#000000" height="32px" />
+            </a>
+          </Link>
+        </div>
       </div>
       <div className="flex flex-col items-center flex-1 p-4">
         <div className="flex items-start">
