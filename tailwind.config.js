@@ -51,8 +51,8 @@ module.exports = {
       },
 
       neutralGradient: {
-        start: "#34215C",
-        end: "#3F305F",
+        start: "#04050a",
+        end: "#15162f",
       },
     },
 
