@@ -2,7 +2,7 @@ import { Facebook, Twitter, Whatsapp } from "./icons";
 import Link from "next/link";
 import useCopyClipboard from "react-use-clipboard";
 
-const url = "https://match.yovoto.pe";
+const url = "https://www.yovoto.pe";
 const encodedUrl = encodeURIComponent(url);
 const text =
   "¿No sabes por quién votar? Responde una serie de preguntas y descubre el candidato mas compatible con tus preferencias:";
