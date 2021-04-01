@@ -41,6 +41,21 @@ export default function OGMetas({
       />
       <title key="title">{title}</title>
       <link rel="icon" href="/favicon.ico" />
+      <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-TXQ23V2NS2"
+      ></script>
+      <script
+        // eslint-disable-next-line react/no-danger
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-TXQ23V2NS2');
+          `,
+        }}
+      />
     </Head>
   );
 }
