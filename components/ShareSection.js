@@ -4,8 +4,7 @@ import useCopyClipboard from "react-use-clipboard";
 
 const url = "https://www.yovoto.pe";
 const encodedUrl = encodeURIComponent(url);
-const text =
-  "¿No sabes por quién votar? Responde una serie de preguntas y descubre el candidato mas compatible con tus preferencias:";
+const text = "15 preguntas y 18 candidatos ¿con quién coincides más?";
 
 const twitterUrl = `https://twitter.com/share?url=${encodedUrl}"&text="${encodeURIComponent(
   text,

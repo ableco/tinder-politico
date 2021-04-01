@@ -8,14 +8,14 @@ export default function FirstCandidateCard({ candidate, size }) {
         <img
           className={`${
             size > 1 ? "w-20 h-20" : "w-28 h-28"
-          } bg-white rounded-full shadow-button object-cover border-white border-2 grayscale`}
+          } bg-white rounded-full shadow-button object-contain border-white border-2 grayscale`}
           src={candidate.data.profile_photo_url}
           alt={titleize(
             `${candidate.data.names}  ${candidate.data.family_name}`,
           )}
         />
         <img
-          className="absolute -bottom-3 left-1/3 w-9 h-9 bg-white rounded-lg object-cover shadow-button border-white border-2"
+          className="absolute -bottom-3 left-1/3 w-9 h-9 bg-white rounded-lg object-contain shadow-button border-white border-2"
           src={candidate.data.political_organization.logo}
           alt={candidate.data.political_organization.name}
         />

@@ -8,14 +8,14 @@ export default function RestCandidateCard({ candidate }) {
         <div className="flex items-center">
           <div className="flex items-center justify-center flex-col xs:flex-col sm:flex-row md:flex-row relative">
             <img
-              className="min-w-12 w-12 h-12 bg-white rounded-full shadow-button object-cover border-white border-2 grayscale"
+              className="min-w-12 w-12 h-12 bg-white rounded-full shadow-button object-contain border-white border-2 grayscale"
               src={candidate.data.profile_photo_url}
               alt={titleize(
                 `${candidate.data.names}  ${candidate.data.family_name}`,
               )}
             />
             <img
-              className="absolute -bottom-3 left-1/3 w-5 h-5 bg-white rounded-lg object-cover shadow-button border-white border-2"
+              className="absolute -bottom-3 left-1/3 w-5 h-5 bg-white rounded-lg object-contain shadow-button border-white border-2"
               src={candidate.data.political_organization.logo}
               alt={candidate.data.political_organization.name}
             />
