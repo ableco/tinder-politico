@@ -16,7 +16,7 @@ export default function Button({ appearance = "default", label, ...props }) {
 
   return (
     <button
-      className={`${styles[appearance]} font-normal text-xl rounded-2xl px-6 py-2 shadow-button focus:outline-none`}
+      className={`${styles[appearance]} font-medium text-xl rounded-2xl px-6 py-2 shadow-button focus:outline-none`}
       {...props}
     >
       {label}
