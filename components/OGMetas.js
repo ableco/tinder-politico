@@ -26,12 +26,6 @@ export default function OGMetas({
         content="summary_large_image"
         key="twitter:card"
       />
-      <meta name="twitter:site" content="@cristianbgp" key="twitter:site" />
-      <meta
-        name="twitter:creator"
-        content="@cristianbgp"
-        key="twitter:creator"
-      />
       <meta name="twitter:url" content={url} key="twitter:url" />
       <meta name="twitter:title" content={title} key="twitter:title" />
       <meta
