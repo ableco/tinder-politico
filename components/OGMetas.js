@@ -5,7 +5,7 @@ export default function OGMetas({
   description = "Descubre tu match politico",
   url = "https://match.yovoto.pe/",
 }) {
-  const image = "/open-graph.png";
+  const image = "https://match.yovoto.pe/open-graph.png";
 
   return (
     <Head>
